@@ -26,7 +26,7 @@ let ensimmäinenYli20 = list.find(value => value > 20);
 console.log("ensimmäinen yli 20: ", ensimmäinenYli20);
 
 // 4. laita lista suuruusjärjestykseen
-console.log("järjestetty", list.sort());
+console.log("järjestetty", list.sort((a,b) => a - b));
 
 // 5. tee funktio, joka tarkistaa onko sille annettu string-parametri
 // palindromi (eli onko koko sana alusta loppuun sama sana esim. "saippuakauppias")
