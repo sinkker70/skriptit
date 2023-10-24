@@ -13,3 +13,15 @@ hop = {
     x: 43
 }
 console.table(hop);
+
+function fnNimi(a, b, c) {
+    return a + b + c; 
+}
+
+function tulostaNimi(f) {
+    console.log(f(1,2,3));
+    function inner(a, b){
+        console.log("inner", a, b);
+    }
+}
+tulostaNimi(fnNimi);
