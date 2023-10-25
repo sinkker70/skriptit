@@ -37,5 +37,27 @@ function onPalindromi(str) {
     return reverse === str;  
 }
 
-console.log("öh on palindromi:", onPalindromi("öh"));
-console.log("höh on palindromi:", onPalindromi("höh"));
+let mja = "öh";
+console.log(`${mja} on palindromi:`, onPalindromi(mja));
+mja = "höh"
+console.log(`${mja} on palindromi:`, onPalindromi(mja));
+
+//spread-operaattori
+let old1 = [1,2,3,4,5]
+let old2 = [6,7,8,9,10]
+
+//expected result = [1,2,3,4,5, "text1", "text2", 6, 7, 8, 9, 10]
+let newList = [...old1, "text1", "text2", ...old2];
+console.table(newList);
+
+//10. Tee funktio, joka saa parametriksi listan ja laskee sen elementtien summan. 
+
+function summa(lista) {
+    let sum = 0; 
+    lista.forEach(element => {
+        sum += element;
+    });
+    return sum; 
+}
+
+console.log("summa old1:", summa(old1));
