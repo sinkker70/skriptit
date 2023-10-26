@@ -1,15 +1,15 @@
 
 //0. muodosta lista, joka on 20 elementin pituinen ja sisältää satunnaisia kokonaislukuja välillä 1 - 50
-const makeList = () => {
+const makeList = length => {
     let list = [];
-    for(let i = 0; i < 20; i++) {
-        list.push(Math.floor(Math.random()*100+1)); 
+    for(let i = 0; i < length; i++) {
+        list.push(Math.floor(Math.random()*50+1)); 
     }
     return list; 
 }
 
 //1. poista listasta luvut, jotka ovat pienempiä kuin 10 ja suurempia kuin 30
-let list = makeList();
+let list = makeList(20);
 console.log("lista", list);
 
 let uusilista = list.filter((value) => {
@@ -61,3 +61,8 @@ function summa(lista) {
 }
 
 console.log("summa old1:", summa(old1));
+
+let rSumma = list.reduce((previsousvalue, currentValue) => {
+    return previsousvalue + currentValue; 
+}, 0);
+console.log("rSumma", rSumma);
